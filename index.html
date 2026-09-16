@@ -632,6 +632,12 @@
             margin-bottom: 20px;
         }
 
+        .header .brand-logo {
+            width: 420px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
         .header h1 {
             font-size: 32px;
             font-weight: 800;
@@ -1081,13 +1087,9 @@
     <div class="container">
         <div class="card">
             <div class="header">
-                <svg width="180" height="75" viewBox="0 0 702.9949722 289.4713444" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="white" d="M0,289.4713444h194.7649612v-45.0899963c-48.6039886,1.7230072-125.056694,2.3680115-125.3830948,2.1529999v-39.1689911c36.1051025-.8610077,74.1680984-2.9060059,116.0391006-6.1360016v-35.07901c-4.2429962.9690094-78.7369995,6.6740112-116.0391006,7.2120056v-38.6309967c55.4580994-2.5839996,78.955101-4.4130096,125.4921036-10.0110016v-42.8501968c-61.0050049,7.7498932-100.112999,11.8400955-194.7651872,11.4310989v196.1591034h-.1087828v.0109863Z"/>
-                    <path fill="white" d="M679.7259903,34.6378521c-15.8390503-19.2348995-43.0890503-34.6378521-78.9000244-34.6378521-49.3770142,0-104.6390076,19.9237522-133.2160034,29.3743519v260.0959854h69.1640015v-67.46698l63.8339844-3.2290039c28.7080078-1.9380035,57.5570068-12.0130005,77.4540405-34.9290009,18.5910034-21.5169983,24.8239746-47.5540009,24.9329834-74.4530029,0-21.3014984-3.3400269-49.5886993-23.2689819-74.7544975ZM536.7739639,158.1953587v-85.2384033c15.0449829-5.4788055,33.0269775-9.2461014,50.6719971-9.1277008,24.1820068-.1184006,45.5690308,12.0554962,45.5690308,39.3420944,0,31.7639999-21.8550415,48.7919998-50.6820068,51.041008l-45.5700073,3.9830017h.0109863Z"/>
-                    <path fill="white" d="M394.9599686,160.3453526c-5.0039978,0-12.1839905.322998-17.9389954,1.076004,43.9379883-6.7810059,62.9639893-33.0340118,62.8549805-69.9426041,0-18.2876968-12.2919922-61.9779015-67.8589783-47.2423019-39.2590027,11.4096031-95.9140015,25.5962982-153.6560059,34.2074051v211.0134811l134.5209961-.4309998c80.0429993,0,96.8940125-42.6139832,96.8940125-78.3389893s-20.006012-50.4599915-54.6970215-50.4599915l-.1080017.1069946-.0109863.0110016ZM286.3289566,109.4433522c2.3930054-.538002,48.9309998-10.0100021,55.4580078-11.0865021,6.2000122-.9687958,22.2890015-3.3367996,30.230011,3.4445038,3.9169922,3.4440002,6.3099976,9.3639984,6.09198,16.7910004-.4349976,15.4889908-12.9449768,22.8089981-37.5189819,26.8989944-18.8089905,3.1220093-37.8460083,6.1350098-54.2610168,8.503006v-44.5510025ZM333.1929703,239.3303532c-18.1669922.8609924-46.9840088,1.7220001-46.875,1.8300018v-48.9649963s42.6319885-4.1980133,50.2359924-4.8440094c10.4429932-.7529907,17.07901-1.5059967,25.1180115-.5379944,11.6399841,1.2919922,17.5140076,10.548996,17.9490051,19.5800018,1.414978,24.5299988-25.2260132,31.9570007-46.4390259,33.0339966v-.1080017l.0110168.0110016Z"/>
-                </svg>
+                <img src="data:image/png;base64,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" alt="EBP by Shine" class="brand-logo">
                 <h1>Formulaire d'Entrée Salarié</h1>
-                <p>Complétez les informations en 5 étapes</p>
+                <p>Complétez les informations en 6 étapes</p>
 
                 <div class="stepper">
                     <div class="stepper-line"></div>
@@ -1112,6 +1114,10 @@
                         <div class="step-circle">5</div>
                         <div class="step-label">Planning</div>
                     </div>
+                    <div class="step" data-step="6">
+                        <div class="step-circle">6</div>
+                        <div class="step-label">Récapitulatif</div>
+                    </div>
                 </div>
             </div>
 
@@ -1126,8 +1132,11 @@
                             <div class="section-header">Établissement</div>
                             <div class="form-grid">
                                 <div class="form-group full-width">
-                                    <label>Nom de l'établissement</label>
-                                    <input type="text" name="etablissement" id="etablissement" placeholder="Ex: Les Hirondelles - Paris" oninput="capitalizeFirst(this)">
+                                    <label>Nom de l'établissement <span style="color: red;">*</span> <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">Permet à votre gestionnaire d'identifier immédiatement de quel client/établissement il s'agit parmi tous les dossiers reçus.</span>i</button></label>
+                                    <input type="text" name="etablissement" id="etablissement" placeholder="Ex: Les Hirondelles - Paris" oninput="capitalizeFirst(this);this.style.borderColor='';document.getElementById('alerte_etablissement').style.display='none'">
+                                    <div id="alerte_etablissement" style="display:none;margin-top:6px;padding:8px 12px;background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;font-size:13px;color:#991b1b;">
+                                        🚫 Le nom de l'établissement est obligatoire.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1801,7 +1810,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group" id="motif_cdd_group" style="display:none;">
-                                    <label>Motif du CDD <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">Doit correspondre exactement au motif mentionné dans le contrat de travail signé</span>i</button></label>
+                                    <label>Motif du CDD <span style="color: red;">*</span> <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">Doit correspondre exactement au motif mentionné dans le contrat de travail signé</span>i</button></label>
                                     <select name="motif_cdd" id="motif_cdd">
                                         <option value="">-- Sélectionner --</option>
                                         <option value="01">Surcroît d'activité</option>
@@ -1813,7 +1822,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Code statut catégoriel convention collective</label>
+                                    <label>Code statut catégoriel convention collective <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">Cadre / Non cadre au sens de votre convention collective — ce n'est pas le même classement que le "Code statut professionnel" ci-dessus. Ce choix pré-remplit automatiquement le "Code retraite" juste en dessous.</span>i</button></label>
                                     <select name="code_statut_cc" id="code_statut_cc" onchange="syncCodeRetraite()">
                                         <option value="">-- Sélectionner --</option>
                                         <option value="01">Cadre</option>
@@ -1822,7 +1831,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Code retraite</label>
+                                    <label>Code retraite <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">Pré-rempli automatiquement à partir du "Code statut catégoriel" ci-dessus (Cadre → Cadre et assimilé, Non cadre → Non cadre). À modifier uniquement si votre caisse de retraite complémentaire vous demande un autre code.</span>i</button></label>
                                     <select name="code_retraite" id="code_retraite">
                                         <option value="">-- Sélectionner --</option>
                                         <option value="01">Cadre et assimilé</option>
@@ -1830,7 +1839,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Code caractéristique de l'activité</label>
+                                    <label>Code caractéristique de l'activité <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">À renseigner uniquement si le salarié est intermittent, saisonnier ou au forfait jour. Dans tous les autres cas (la grande majorité), laissez "Salarié non concerné".</span>i</button></label>
                                     <select name="code_caracteristique_activite">
                                         <option value="">-- Sélectionner --</option>
                                         <option value="04">Intermittent</option>
@@ -2315,6 +2324,13 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- ÉTAPE 6: Récapitulatif de votre saisie -->
+                    <div class="step-content" data-step="6">
+                        <h2 class="step-title">🗒️ Récapitulatif de votre saisie</h2>
+                        <p class="step-description">Vérifiez vos réponses avant de générer le document — cliquez sur "Modifier" pour corriger une section.</p>
+                        <div id="recap-saisie-contenu"></div>
                     </div>
 
                     <!-- Bannière erreur validation étape 3 -->
@@ -42441,7 +42457,7 @@ console.log('✅ 39192 codes postaux chargés');
             }
         }
         
-        const totalSteps = 5;
+        const totalSteps = 6;
 
         document.getElementById('nextBtn').addEventListener('click', () => {
             if (validateCurrentStep()) {
@@ -42484,13 +42500,115 @@ console.log('✅ 39192 codes postaux chargés');
             document.getElementById('nextBtn').style.display = currentStep === totalSteps ? 'none' : 'flex';
             document.getElementById('submitBtn').style.display = currentStep === totalSteps ? 'flex' : 'none';
 
+            if (currentStep === totalSteps) genererRecapSaisie();
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Échappement HTML pour l'affichage en direct (récapitulatif de saisie, étape 6)
+        function escLive(str) {
+            if (str === undefined || str === null) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        // Un champ est considéré masqué s'il (ou un de ses parents, jusqu'à l'étape) a display:none en ligne —
+        // ça couvre les blocs conditionnels (RIB/IBAN si pas de virement, motif CDD si pas CDD, etc.)
+        // sans être trompé par le fait que l'étape elle-même n'est pas la page active au moment de l'appel.
+        function champVisibleDansEtape(el, stepContent) {
+            let node = el;
+            while (node && node !== stepContent) {
+                if (node.style && node.style.display === 'none') return false;
+                node = node.parentElement;
+            }
+            return true;
+        }
+
+        function genererRecapSaisie() {
+            const container = document.getElementById('recap-saisie-contenu');
+            if (!container) return;
+            let html = '';
+            for (let step = 1; step <= 5; step++) {
+                const stepContent = document.querySelector(`.step-content[data-step="${step}"]`);
+                if (!stepContent) continue;
+                const stepTitleEl = stepContent.querySelector('.step-title');
+                const stepTitle = stepTitleEl ? stepTitleEl.textContent.trim() : ('Étape ' + step);
+                let stepHtml = '';
+                stepContent.querySelectorAll('.section').forEach(section => {
+                    const sectionHeaderEl = section.querySelector('.section-header');
+                    const sectionTitle = sectionHeaderEl ? sectionHeaderEl.textContent.trim() : '';
+                    let rows = '';
+                    section.querySelectorAll('input[name], select[name], textarea[name]').forEach(el => {
+                        if (el.type === 'file' || el.type === 'hidden') return;
+                        if (!champVisibleDansEtape(el, stepContent)) return;
+
+                        let label = '';
+                        const grp = el.closest('.form-group');
+                        const lblEl = grp ? grp.querySelector('label') : null;
+                        if (lblEl) {
+                            const clone = lblEl.cloneNode(true);
+                            clone.querySelectorAll('button, span').forEach(s => s.remove());
+                            label = clone.textContent.trim();
+                        }
+                        if (!label) label = el.name;
+
+                        let value = '';
+                        if (el.tagName === 'SELECT') {
+                            const opt = el.options[el.selectedIndex];
+                            value = opt ? opt.text.trim() : '';
+                            if (/^--/.test(value)) value = '';
+                        } else if (el.type === 'checkbox') {
+                            value = el.checked ? 'Oui' : '';
+                        } else if (el.type === 'date') {
+                            if (el.value && /^\d{4}-\d{2}-\d{2}$/.test(el.value)) {
+                                const [y, m, d] = el.value.split('-');
+                                value = d + '/' + m + '/' + y;
+                            }
+                        } else {
+                            value = el.value || '';
+                        }
+                        if (!value) return;
+
+                        rows += '<div style="display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid #f1f5f9;font-size:13.5px;">'
+                              + '<span style="color:#64748b;">' + escLive(label) + '</span>'
+                              + '<span style="color:#111827;font-weight:600;text-align:right;">' + escLive(value) + '</span>'
+                              + '</div>';
+                    });
+                    if (rows) {
+                        stepHtml += '<div style="margin-bottom:4px;"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#6366f1;margin:14px 0 2px;">'
+                                  + escLive(sectionTitle) + '</div>' + rows + '</div>';
+                    }
+                });
+                if (stepHtml) {
+                    html += '<div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px;margin-bottom:16px;">'
+                          + '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px;">'
+                          + '<div style="font-size:15px;font-weight:700;color:#1e293b;">' + escLive(stepTitle) + '</div>'
+                          + '<button type="button" onclick="currentStep=' + step + ';updateStep();" style="background:none;border:1px solid #c7d2fe;color:#4338ca;border-radius:8px;padding:4px 12px;font-size:12.5px;font-weight:600;cursor:pointer;">✎ Modifier</button>'
+                          + '</div>' + stepHtml + '</div>';
+                }
+            }
+            container.innerHTML = html || '<p style="color:#6b7280;">Aucune information saisie.</p>';
         }
 
         function validateCurrentStep() {
             // Validation des champs obligatoires de l'étape 1
             if (currentStep === 1) {
                 let hasError = false;
+
+                // Établissement
+                const etablissementInput = document.getElementById('etablissement');
+                if (!etablissementInput.value.trim()) {
+                    etablissementInput.style.borderColor = '#ef4444';
+                    document.getElementById('alerte_etablissement').style.display = 'block';
+                    hasError = true;
+                } else {
+                    etablissementInput.style.borderColor = '';
+                    document.getElementById('alerte_etablissement').style.display = 'none';
+                }
 
                 // Nom de naissance
                 const nomInput = document.querySelector('input[name="nom_naissance"]');
@@ -42595,6 +42713,14 @@ console.log('✅ 39192 codes postaux chargés');
                     } else { fin.style.borderColor = '#22c55e'; }
                 }
 
+                // Motif du CDD obligatoire (mention légale du contrat)
+                const motifCDD = document.getElementById('motif_cdd');
+                const isCDDStrict = typeContrat && typeContrat.value === '02';
+                if (isCDDStrict && (!motifCDD || !motifCDD.value)) {
+                    if (motifCDD) motifCDD.style.borderColor = '#ef4444';
+                    manquants3.push('Le motif du CDD est obligatoire');
+                } else if (motifCDD) { motifCDD.style.borderColor = ''; }
+
                 if (manquants3.length > 0) {
                     const banniere = document.getElementById('banniere_erreur_step3');
                     const liste = document.getElementById('banniere_erreur_step3_liste');
@@ -42693,7 +42819,7 @@ console.log('✅ 39192 codes postaux chargés');
             const csvContent = generateCSV(data);
             
             // Calculer le nom de fichier AVANT la génération du HTML
-            const generatedFileName = 'entrée_salarié_' + (data.nom_naissance || 'nouveau') + '_' + (data.prenom || '') + (data.etablissement ? '_' + data.etablissement.replace(/\s+/g, '_') : '') + '.html';
+            const generatedFileName = (data.etablissement ? data.etablissement.replace(/\s+/g, '_') + '_' : '') + 'entrée_salarié_' + (data.nom_naissance || 'nouveau') + '_' + (data.prenom || '') + '.html';
 
             // Générer le document HTML avec CSV embarqué
             console.log('📄 Génération du document HTML avec CSV embarqué...');
@@ -42711,13 +42837,9 @@ console.log('✅ 39192 codes postaux chargés');
         });
 
         // ============================================================
-        // 🏢 GÉNÉRATION CSV - MULTI-LOGICIELS
+        // 🏢 GÉNÉRATION CSV - SILAE/CEGID (204 colonnes)
         // ============================================================
-        // Deux fonctions de génération selon le logiciel de paie :
-        // - generateCSV_Silae() : Pour Silae/Cegid (204 colonnes)
-        // - generateCSV_OpenPaye() : Pour Open Paye (à configurer)
-        // ============================================================
-        
+
         function generateCSV_Silae(data) {
             // ============================================================
             // 📋 CONFIGURATION DU MAPPING SILAE/CEGID
@@ -42971,8 +43093,8 @@ console.log('✅ 39192 codes postaux chargés');
             // 🔧 GÉNÉRATION DU CSV (Ne pas modifier)
             // ============================================================
             
-            // Créer un tableau de 204 colonnes vides
-            const csvRow = new Array(205).fill('');
+            // Créer un tableau vide, une case par colonne réelle
+            const csvRow = new Array(COLONNES_CEGID_ORDRE.length).fill('');
             
             // Remplir selon le mapping
             for (const [champFormulaire, valeur] of Object.entries(data)) {
@@ -43079,301 +43201,43 @@ console.log('✅ 39192 codes postaux chargés');
             return headers + '\n' + values;
         }
         
-        function generateCSV_OpenPaye(data) {
-            // ============================================================
-            // 📋 CONFIGURATION DU MAPPING OPEN PAYE
-            // ============================================================
-            // ⚠️ À CONFIGURER : Mapping pour Open Paye
-            //
-            // Pour configurer ce mapping :
-            // 1. Obtenez le fichier CSV template d'Open Paye
-            // 2. Identifiez les colonnes et leur ordre
-            // 3. Remplissez le mapping ci-dessous
-            // 4. Mettez à jour COLONNES_OPENPAYE_ORDRE avec toutes les colonnes dans l'ordre
-            //
-            // Format : "nom_champ_formulaire": "NOM_COLONNE_OPENPAYE"
-            // ============================================================
-            
-            const MAPPING_FORMULAIRE_VERS_OPENPAYE = {
-                // ⚠️ EXEMPLE - À REMPLACER PAR LES VRAIES COLONNES OPEN PAYE
-                // Décommentez et complétez selon votre template Open Paye
-                
-                // "matricule": "Matricule",
-                // "civilite": "Civilité",
-                // "nom": "Nom",
-                // "prenom": "Prénom",
-                // ... etc
-                
-                // ÉTAPE 1 - Civilité
-                "matricule": "",
-                "civilite": "",
-                "nom": "",
-                "prenom": "",
-                "nom_usage": "",
-                "nom_jeune_fille": "",
-                "date_naissance": "",
-                "dept_naissance": "",
-                "commune_naissance": "",
-                "pays_naissance": "",
-                "nationalite": "",
-                "numero_secu": "",
-                
-                // ÉTAPE 2 - Coordonnées
-                "numero_voie": "",
-                "bis_ter_quater": "",
-                "type_voie": "",
-                "voie": "",
-                "complement": "",
-                "code_postal": "",
-                "ville": "",
-                "telephone": "",
-                "email": "",
-                "iban": "",
-                "bic": "",
-                "rib": "",
-                
-                // ÉTAPE 3 - Contrat
-                "intitule_poste": "",
-                "type_contrat": "",
-                "code_statut_pro": "",
-                "motif_cdd": "",
-                "code_statut_cc": "",
-                "code_retraite": "",
-                "code_caracteristique_activite": "",
-                "nb_jours_forfait": "",
-                "debut_contrat": "",
-                "date_entree": "",
-                "date_anciennete": "",
-                "fin_contrat": "",
-                
-                // ÉTAPE 4 - Rémunération
-                "type_remuneration": "",
-                "salaire_base": "",
-                "nb_heures_mensuelles": "",
-                "planning_lundi": "",
-                "planning_mardi": "",
-                "planning_mercredi": "",
-                "planning_jeudi": "",
-                "planning_vendredi": "",
-                "planning_samedi": "",
-                "planning_dimanche": "",
-                "ticket_restaurant": "",
-                "pct_abattement": "",
-                "mutuelle": "",
-                "mutuelle_type_contrat": "",
-                "titre_transport": "",
-                "dpae_effectuee": "",
-                "contrat_envoye": "",
-                "commentaires": ""
-            };
-            
-            // ⚠️ À CONFIGURER : Liste de TOUTES les colonnes Open Paye dans l'ordre
-            // Exemple : const COLONNES_OPENPAYE_ORDRE = ["Matricule", "Civilité", "Nom", "Prénom", ...];
-            const COLONNES_OPENPAYE_ORDRE = [
-                // ⚠️ REMPLACEZ CETTE LISTE PAR LES VRAIES COLONNES OPEN PAYE
-                // Pour l'instant, on met juste les colonnes non vides du mapping
-            ];
-            
-            // Filtrer pour ne garder que les colonnes configurées (non vides)
-            const colonnesConfigurees = Object.entries(MAPPING_FORMULAIRE_VERS_OPENPAYE)
-                .filter(([_, col]) => col !== "")
-                .map(([_, col]) => col);
-            
-            const colonnesFinales = colonnesConfigurees.length > 0 ? colonnesConfigurees : COLONNES_OPENPAYE_ORDRE;
-            
-            // Créer un objet avec toutes les colonnes initialisées à vide
-            const row = {};
-            colonnesFinales.forEach(col => {
-                row[col] = '';
-            });
-            
-            // Remplir avec les données du formulaire selon le mapping
-            for (const [champ, colonne] of Object.entries(MAPPING_FORMULAIRE_VERS_OPENPAYE)) {
-                if (colonne && data[champ]) {
-                    row[colonne] = data[champ];
-                }
-            }
-            
-            // Générer les valeurs dans l'ordre et échapper les guillemets
-            const values = colonnesFinales.map(col => {
-                const value = String(row[col] || '');
-                // Échapper les guillemets doubles et encadrer les valeurs contenant ; ou "
-                if (value.includes(';') || value.includes('"')) {
-                    return '"' + value.replace(/"/g, '""') + '"';
-                }
-                return value;
-            });
-            
-            // Générer le CSV final
-            const headers = colonnesFinales.join(';');
-            const valuesLine = values.join(';');
-            
-            return headers + '\n' + valuesLine;
-        }
-        
-        // ============================================================
-        // 🔄 FONCTION GÉNÉRIQUE DE GÉNÉRATION CSV
-        // ============================================================
-        // Cette fonction détecte quel logiciel utiliser et appelle
-        // la bonne fonction de génération
-        // ============================================================
-        function generateCSV(data, logiciel = 'silae') {
-            if (logiciel === 'openpaye') {
-                return generateCSV_OpenPaye(data);
-            } else {
-                return generateCSV_Silae(data);
-            }
-        }
-        
-        function downloadCSV(content, filename) {
-            const BOM = '\uFEFF';
-            const blob = new Blob([BOM + content], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            const url = URL.createObjectURL(blob);
-            link.setAttribute('href', url);
-            link.setAttribute('download', filename);
-            link.click();
+        function generateCSV(data) {
+            return generateCSV_Silae(data);
         }
 
         function generateWord(data, csvContent, generatedFileName) {
             console.log('✅ Génération du document HTML avec CSV embarqué (multi-logiciels)');
             
-            // 🔄 Dictionnaires de conversion code → nom pour l'affichage
-            const PAYS_CODES = {
-                'AF': 'Afghanistan', 'ZA': 'Afrique du Sud', 'AL': 'Albanie', 'DZ': 'Algérie', 'DE': 'Allemagne',
-                'AD': 'Andorre', 'AO': 'Angola', 'AG': 'Antigua-et-Barbuda', 'SA': 'Arabie saoudite', 'AR': 'Argentine',
-                'AM': 'Arménie', 'AU': 'Australie', 'AT': 'Autriche', 'AZ': 'Azerbaïdjan', 'BS': 'Bahamas',
-                'BH': 'Bahreïn', 'BD': 'Bangladesh', 'BB': 'Barbade', 'BE': 'Belgique', 'BZ': 'Belize',
-                'BJ': 'Bénin', 'BT': 'Bhoutan', 'BY': 'Biélorussie', 'BO': 'Bolivie', 'BA': 'Bosnie-Herzégovine',
-                'BW': 'Botswana', 'BR': 'Brésil', 'BN': 'Brunéi', 'BG': 'Bulgarie', 'BF': 'Burkina Faso',
-                'BI': 'Burundi', 'KH': 'Cambodge', 'CM': 'Cameroun', 'CA': 'Canada', 'CV': 'Cap-Vert',
-                'CF': 'Centrafricaine (République)', 'CL': 'Chili', 'CN': 'Chine', 'CY': 'Chypre', 'CO': 'Colombie',
-                'KM': 'Comores', 'CG': 'Congo', 'KP': 'Corée du Nord', 'KR': 'Corée du Sud', 'CR': 'Costa Rica',
-                'CI': "Côte d'Ivoire", 'HR': 'Croatie', 'CU': 'Cuba', 'DK': 'Danemark', 'DJ': 'Djibouti',
-                'DM': 'Dominique', 'EG': 'Égypte', 'AE': 'Émirats arabes unis', 'EC': 'Équateur', 'ER': 'Érythrée',
-                'ES': 'Espagne', 'EE': 'Estonie', 'SZ': 'Eswatini', 'US': 'États-Unis', 'ET': 'Éthiopie',
-                'FJ': 'Fidji', 'FI': 'Finlande', 'FR': 'France', 'GA': 'Gabon', 'GM': 'Gambie',
-                'GE': 'Géorgie', 'GH': 'Ghana', 'GR': 'Grèce', 'GD': 'Grenade', 'GT': 'Guatemala',
-                'GN': 'Guinée', 'GQ': 'Guinée équatoriale', 'GW': 'Guinée-Bissau', 'GY': 'Guyana', 'HT': 'Haïti',
-                'HN': 'Honduras', 'HU': 'Hongrie', 'IN': 'Inde', 'ID': 'Indonésie', 'IQ': 'Irak',
-                'IR': 'Iran', 'IE': 'Irlande', 'IS': 'Islande', 'IL': 'Israël', 'IT': 'Italie',
-                'JM': 'Jamaïque', 'JP': 'Japon', 'JO': 'Jordanie', 'KZ': 'Kazakhstan', 'KE': 'Kenya',
-                'KG': 'Kirghizistan', 'KI': 'Kiribati', 'KW': 'Koweït', 'LA': 'Laos', 'LS': 'Lesotho',
-                'LV': 'Lettonie', 'LB': 'Liban', 'LR': 'Libéria', 'LY': 'Libye', 'LI': 'Liechtenstein',
-                'LT': 'Lituanie', 'LU': 'Luxembourg', 'MK': 'Macédoine du Nord', 'MG': 'Madagascar', 'MY': 'Malaisie',
-                'MW': 'Malawi', 'MV': 'Maldives', 'ML': 'Mali', 'MT': 'Malte', 'MA': 'Maroc',
-                'MH': 'Marshall (Îles)', 'MU': 'Maurice', 'MR': 'Mauritanie', 'MX': 'Mexique', 'FM': 'Micronésie',
-                'MD': 'Moldavie', 'MC': 'Monaco', 'MN': 'Mongolie', 'ME': 'Monténégro', 'MZ': 'Mozambique',
-                'MM': 'Myanmar', 'NA': 'Namibie', 'NR': 'Nauru', 'NP': 'Népal', 'NI': 'Nicaragua',
-                'NE': 'Niger', 'NG': 'Nigéria', 'NO': 'Norvège', 'NZ': 'Nouvelle-Zélande', 'OM': 'Oman',
-                'UG': 'Ouganda', 'UZ': 'Ouzbékistan', 'PK': 'Pakistan', 'PW': 'Palaos', 'PA': 'Panama',
-                'PG': 'Papouasie-Nouvelle-Guinée', 'PY': 'Paraguay', 'NL': 'Pays-Bas', 'PE': 'Pérou', 'PH': 'Philippines',
-                'PL': 'Pologne', 'PT': 'Portugal', 'QA': 'Qatar', 'CD': 'RD Congo', 'DO': 'République dominicaine',
-                'CZ': 'République tchèque', 'RO': 'Roumanie', 'GB': 'Royaume-Uni', 'RU': 'Russie', 'RW': 'Rwanda',
-                'KN': 'Saint-Christophe-et-Niévès', 'SM': 'Saint-Marin', 'VC': 'Saint-Vincent-et-les-Grenadines', 'LC': 'Sainte-Lucie',
-                'SB': 'Salomon (Îles)', 'SV': 'Salvador', 'WS': 'Samoa', 'ST': 'Sao Tomé-et-Principe', 'SN': 'Sénégal',
-                'RS': 'Serbie', 'SC': 'Seychelles', 'SL': 'Sierra Leone', 'SG': 'Singapour', 'SK': 'Slovaquie',
-                'SI': 'Slovénie', 'SO': 'Somalie', 'SD': 'Soudan', 'SS': 'Soudan du Sud', 'LK': 'Sri Lanka',
-                'SE': 'Suède', 'CH': 'Suisse', 'SR': 'Suriname', 'SY': 'Syrie', 'TJ': 'Tadjikistan',
-                'TZ': 'Tanzanie', 'TD': 'Tchad', 'TH': 'Thaïlande', 'TL': 'Timor oriental', 'TG': 'Togo',
-                'TO': 'Tonga', 'TT': 'Trinité-et-Tobago', 'TN': 'Tunisie', 'TM': 'Turkménistan', 'TR': 'Turquie',
-                'TV': 'Tuvalu', 'UA': 'Ukraine', 'UY': 'Uruguay', 'VU': 'Vanuatu', 'VA': 'Vatican',
-                'VE': 'Venezuela', 'VN': 'Viêt Nam', 'YE': 'Yémen', 'ZM': 'Zambie', 'ZW': 'Zimbabwe'
-            };
-            
-            const CIVILITE_CODES = {
-                '1': 'Monsieur',
-                '2': 'Madame'
-            };
-            
-            const TYPE_CONTRAT_CODES = {
-                '01': 'CDI',
-                '02': 'CDD',
-                '04': 'Contrat d\'apprentissage (< 11 salariés)',
-                '05': 'Contrat d\'apprentissage (≥ 11 salariés)',
-                'AUTRE': data.autre_contrat || 'Autre'
-            };
-            
-            const STATUT_PRO_CODES = {
-                '01': 'Ouvrier',
-                '02': 'Employé',
-                '03': 'Technicien',
-                '04': 'Agent de maîtrise',
-                '29': 'Cadre'
-            };
-            
-            const MOTIF_CDD_CODES = {
-                '01': 'Surcroît d\'activité',
-                '02': 'Remplacement d\'un salarié absent',
-                '03': 'CDD d\'usage',
-                '04': 'CDD saisonnier'
-            };
-            
-            const STATUT_CC_CODES = {
-                '01': 'Cadre',
-                '02': 'Non cadre',
-                '90': 'Sans statut catégoriel'
-            };
-            
-            const RETRAITE_CODES = {
-                '01': 'Cadre et assimilé',
-                '04': 'Non cadre'
-            };
-            
-            const CARACTERISTIQUE_ACTIVITE_CODES = {
-                '04': 'Intermittent',
-                '06': 'Saisonnier',
-                '10': 'Forfait jour',
-                '90': 'Salarié non concerné'
-            };
-            
-            const TICKETS_RESTAURANT_CODES = {
-                '0': 'Pas de Ticket',
-                '1': 'Nombre de ticket calculé en fonction du planning',
-                '2': 'Nombre de ticket à saisir'
-            };
-            
-            const VRAI_FAUX_CODES = {
-                'VRAI': 'Oui',
-                'FAUX': 'Non'
-            };
-            
-            const OUI_NON_CODES = {
-                '0': 'Non',
-                '1': 'Oui'
-            };
-            
-            // Convertir les codes en noms pour l'affichage
-            const paysNaissanceNom = data.pays_naissance ? (PAYS_CODES[data.pays_naissance] || data.pays_naissance) : '';
-            const nationaliteNom = data.nationalite ? (PAYS_CODES[data.nationalite] || data.nationalite) : '';
-            const civiliteNom = data.civilite ? (CIVILITE_CODES[data.civilite] || data.civilite) : '';
-            const typeContratNom = data.type_contrat ? (TYPE_CONTRAT_CODES[data.type_contrat] || data.type_contrat) : '';
-            const statutProNom = data.code_statut_pro ? (STATUT_PRO_CODES[data.code_statut_pro] || data.code_statut_pro) : '';
-            const motifCDDNom = data.motif_cdd ? (MOTIF_CDD_CODES[data.motif_cdd] || data.motif_cdd) : '';
-            const statutCCNom = data.code_statut_cc ? (STATUT_CC_CODES[data.code_statut_cc] || data.code_statut_cc) : '';
-            const retraiteNom = data.code_retraite ? (RETRAITE_CODES[data.code_retraite] || data.code_retraite) : '';
-            const caracteristiqueActiviteNom = data.code_caracteristique_activite ? (CARACTERISTIQUE_ACTIVITE_CODES[data.code_caracteristique_activite] || data.code_caracteristique_activite) : '';
-            const ticketRestaurantNom = data.ticket_restaurant ? (TICKETS_RESTAURANT_CODES[data.ticket_restaurant] || data.ticket_restaurant) : '';
-            const exclusionGestionCPNom = data.exclusion_gestion_cp ? (OUI_NON_CODES[data.exclusion_gestion_cp] || data.exclusion_gestion_cp) : '';
-            const paiementMensuelCPNom = data.paiement_mensuel_cp ? (VRAI_FAUX_CODES[data.paiement_mensuel_cp] || data.paiement_mensuel_cp) : '';
-            const paiementPrecariteNom = data.paiement_indemnite_precarite ? (VRAI_FAUX_CODES[data.paiement_indemnite_precarite] || data.paiement_indemnite_precarite) : '';
-            const horairesClassiquesNom = data.horaires_classiques ? (VRAI_FAUX_CODES[data.horaires_classiques] || data.horaires_classiques) : '';
-            
-            // Générer les deux versions du CSV
-            const csvContent_Silae = generateCSV(data, 'silae');
-            const csvContent_OpenPaye = generateCSV(data, 'openpaye');
-            
-            // Encoder les CSV en base64 pour l'embarquer
+            // Générer le CSV Silae
+            const csvContent_Silae = generateCSV(data);
+
+            // Encoder le CSV en base64 pour l'embarquer
             const csvBase64 = btoa(unescape(encodeURIComponent(csvContent_Silae)));
-            const csvBase64_OpenPaye = btoa(unescape(encodeURIComponent(csvContent_OpenPaye)));
-            
+
+            // 🔒 Échappement HTML des valeurs saisies par le salarié avant injection dans le récapitulatif
+            // (évite qu'un champ libre comme "commentaires" ou "nom" contenant du HTML/JS ne s'exécute
+            // à l'ouverture du fichier récapitulatif par le gestionnaire)
+            function escHtml(str) {
+                if (str === undefined || str === null) return str;
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+            const dataHtml = {};
+            for (const cle in data) {
+                dataHtml[cle] = typeof data[cle] === 'string' ? escHtml(data[cle]) : data[cle];
+            }
+
             // Créer un clone complet du formulaire avec tous les styles + CSV embarqué
             const htmlContent = `<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'Entrée Salarié - ${data.nom_naissance || 'Nouveau'} ${data.prenom || ''}</title>
+    <title>Formulaire d'Entrée Salarié - ${dataHtml.nom_naissance || 'Nouveau'} ${dataHtml.prenom || ''}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43415,6 +43279,12 @@ console.log('✅ 39192 codes postaux chargés');
             color: #64748b;
             font-size: 16px;
             font-weight: 600;
+        }
+
+        .logo .brand-logo {
+            width: 340px;
+            height: auto;
+            margin-bottom: 12px;
         }
 
         .form-card {
@@ -43647,16 +43517,17 @@ console.log('✅ 39192 codes postaux chargés');
     <div class="bg-animation"></div>
     <div class="container">
         <div class="logo">
-            <h1>EBP</h1>
+            <img src="data:image/png;base64,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" alt="EBP by Shine" class="brand-logo">
             <p>Formulaire d'Entrée Salarié</p>
         </div>
 
         <div class="form-card">
             <div class="form-header">
-                <h2>${data.nom_naissance || ''} ${data.prenom || ''}</h2>
+                ${dataHtml.etablissement ? `<div style="display:inline-block;margin-bottom:10px;padding:6px 16px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;font-size:13px;font-weight:700;color:#3730a3;letter-spacing:.3px;">🏢 ${dataHtml.etablissement}</div>` : ''}
+                <h2>${dataHtml.nom_naissance || ''} ${dataHtml.prenom || ''}</h2>
                 <p>Document généré pour le gestionnaire</p>
                 <button class="btn-csv" onclick="downloadCSV();document.getElementById('alerte_matricule').style.display='block';document.getElementById('alerte_matricule').scrollIntoView({behavior:'smooth',block:'center'})">📥 Télécharger le fichier Excel</button>
-                ${fichierContratBase64 ? `<a href="${fichierContratBase64}" download="${fichierContratNom}" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#22c55e;color:white;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">📎 Télécharger le contrat joint</a>` : ''}
+                ${fichierContratBase64 ? `<a href="${fichierContratBase64}" download="${escHtml(fichierContratNom)}" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#22c55e;color:white;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">📎 Télécharger le contrat joint</a>` : ''}
             </div>
 
             <!-- ALERTE MATRICULE — masquée par défaut, affichée au téléchargement Excel -->
@@ -43680,59 +43551,59 @@ console.log('✅ 39192 codes postaux chargés');
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Nombre d'enfants à charge</div>
-                        <div style="font-size:14px;color:${data.nb_enfants !== undefined && data.nb_enfants !== '' ? '#111827' : '#9ca3af'};">${data.nb_enfants !== undefined && data.nb_enfants !== '' ? data.nb_enfants : 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.nb_enfants !== undefined && dataHtml.nb_enfants !== '' ? '#111827' : '#9ca3af'};">${dataHtml.nb_enfants !== undefined && dataHtml.nb_enfants !== '' ? dataHtml.nb_enfants : 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Établissement</div>
-                        <div style="font-size:14px;color:${data.etablissement ? '#111827' : '#9ca3af'};">${data.etablissement || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.etablissement ? '#111827' : '#9ca3af'};">${dataHtml.etablissement || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Mutuelle</div>
-                        <div style="font-size:14px;color:${data.mutuelle ? '#111827' : '#9ca3af'};">${data.mutuelle || 'Non renseigné'}${data.mutuelle === 'Oui' && data.mutuelle_type_contrat ? ' — ' + (data.mutuelle_type_contrat === 'Autre' && data.mutuelle_type_autre ? data.mutuelle_type_autre : data.mutuelle_type_contrat) : ''}</div>
+                        <div style="font-size:14px;color:${dataHtml.mutuelle ? '#111827' : '#9ca3af'};">${dataHtml.mutuelle || 'Non renseigné'}${dataHtml.mutuelle === 'Oui' && dataHtml.mutuelle_type_contrat ? ' — ' + (dataHtml.mutuelle_type_contrat === 'Autre' && dataHtml.mutuelle_type_autre ? dataHtml.mutuelle_type_autre : dataHtml.mutuelle_type_contrat) : ''}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">DPAE effectuée</div>
-                        <div style="font-size:14px;color:${data.dpae_effectuee ? (data.dpae_effectuee === 'Non' ? '#dc2626' : '#16a34a') : '#9ca3af'};">${data.dpae_effectuee || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.dpae_effectuee ? (dataHtml.dpae_effectuee === 'Non' ? '#dc2626' : '#16a34a') : '#9ca3af'};">${dataHtml.dpae_effectuee || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Contrat envoyé au gestionnaire</div>
-                        <div style="font-size:14px;color:${data.contrat_envoye ? (data.contrat_envoye === 'Non' ? '#dc2626' : '#16a34a') : '#9ca3af'};">${data.contrat_envoye || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.contrat_envoye ? (dataHtml.contrat_envoye === 'Non' ? '#dc2626' : '#16a34a') : '#9ca3af'};">${dataHtml.contrat_envoye || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Paiement mensuel précarité</div>
-                        <div style="font-size:14px;color:${data.paiement_precarite ? '#111827' : '#9ca3af'};">${data.paiement_precarite || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.paiement_precarite ? '#111827' : '#9ca3af'};">${dataHtml.paiement_precarite || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Titre de transport</div>
-                        <div style="font-size:14px;color:${data.titre_transport ? '#111827' : '#9ca3af'};">${data.titre_transport || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.titre_transport ? '#111827' : '#9ca3af'};">${dataHtml.titre_transport || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Échelon</div>
-                        <div style="font-size:14px;color:${data.echelon ? '#111827' : '#9ca3af'};">${data.echelon || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.echelon ? '#111827' : '#9ca3af'};">${dataHtml.echelon || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Niveau</div>
-                        <div style="font-size:14px;color:${data.niveau ? '#111827' : '#9ca3af'};">${data.niveau || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.niveau ? '#111827' : '#9ca3af'};">${dataHtml.niveau || 'Non renseigné'}</div>
                     </div>
 
                     <div style="background:white;border-radius:10px;padding:12px 16px;border:1px solid #e5e7eb;">
                         <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Coefficient</div>
-                        <div style="font-size:14px;color:${data.coefficient ? '#111827' : '#9ca3af'};">${data.coefficient || 'Non renseigné'}</div>
+                        <div style="font-size:14px;color:${dataHtml.coefficient ? '#111827' : '#9ca3af'};">${dataHtml.coefficient || 'Non renseigné'}</div>
                     </div>
 
                 </div>
-                ${data.commentaires ? `
+                ${dataHtml.commentaires ? `
                 <div style="margin-top:16px;background:white;border-radius:10px;padding:14px 16px;border:1px solid #e5e7eb;">
                     <div style="font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Commentaires</div>
-                    <div style="font-size:14px;color:#111827;white-space:pre-wrap;">${data.commentaires}</div>
+                    <div style="font-size:14px;color:#111827;white-space:pre-wrap;">${dataHtml.commentaires}</div>
                 </div>` : ''}
             </div>
 
@@ -43771,11 +43642,11 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Matricule</label>
-                        <div class="input-value ${data.matricule ? '' : 'empty'}">${data.matricule || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.matricule ? '' : 'empty'}">${dataHtml.matricule || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Civilité</label>
-                        <div class="input-value ${data.civilite ? '' : 'empty'}">${data.civilite === '1' ? 'Monsieur' : data.civilite === '2' ? 'Madame' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.civilite ? '' : 'empty'}">${dataHtml.civilite === '1' ? 'Monsieur' : dataHtml.civilite === '2' ? 'Madame' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -43785,48 +43656,48 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Nom de naissance</label>
-                        <div class="input-value ${data.nom_naissance ? '' : 'empty'}" style="text-transform: uppercase;">${data.nom_naissance || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.nom_naissance ? '' : 'empty'}" style="text-transform: uppercase;">${dataHtml.nom_naissance || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Nom d'usage/marital</label>
-                        <div class="input-value ${data.nom_usage ? '' : 'empty'}" style="text-transform: uppercase;">${data.nom_usage || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.nom_usage ? '' : 'empty'}" style="text-transform: uppercase;">${dataHtml.nom_usage || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Prénom</label>
-                        <div class="input-value ${data.prenom ? '' : 'empty'}">${data.prenom || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.prenom ? '' : 'empty'}">${dataHtml.prenom || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Date de naissance</label>
-                        <div class="input-value ${data.date_naissance ? '' : 'empty'}">${data.date_naissance || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.date_naissance ? '' : 'empty'}">${dataHtml.date_naissance || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Département de naissance</label>
-                        <div class="input-value ${data.dept_naissance ? '' : 'empty'}">${data.dept_naissance || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.dept_naissance ? '' : 'empty'}">${dataHtml.dept_naissance || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Commune de naissance</label>
-                        <div class="input-value ${data.commune_naissance ? '' : 'empty'}">${data.commune_naissance || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.commune_naissance ? '' : 'empty'}">${dataHtml.commune_naissance || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Pays de naissance</label>
-                        <div class="input-value ${data.pays_naissance ? '' : 'empty'}">${data.pays_naissance || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.pays_naissance ? '' : 'empty'}">${dataHtml.pays_naissance || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Pays de nationalité</label>
-                        <div class="input-value ${data.pays_nationalite ? '' : 'empty'}">${data.pays_nationalite || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.pays_nationalite ? '' : 'empty'}">${dataHtml.pays_nationalite || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Numéro de Sécurité Sociale</label>
-                        <div class="input-value ${data.sans_secu_fr === 'on' ? 'empty' : (data.numero_secu ? '' : 'empty')}">
-                            ${data.sans_secu_fr === 'on'
-                                ? '⚠️ Pas de numéro SS français' + (data.commentaire_secu ? ' — ' + data.commentaire_secu : '')
-                                : (data.numero_secu || 'Non renseigné')}
+                        <div class="input-value ${dataHtml.sans_secu_fr === 'on' ? 'empty' : (dataHtml.numero_secu ? '' : 'empty')}">
+                            ${dataHtml.sans_secu_fr === 'on'
+                                ? '⚠️ Pas de numéro SS français' + (dataHtml.commentaire_secu ? ' — ' + dataHtml.commentaire_secu : '')
+                                : (dataHtml.numero_secu || 'Non renseigné')}
                         </div>
                     </div>
                 </div>
@@ -43842,33 +43713,33 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Numéro de voie</label>
-                        <div class="input-value ${data.numero_voie ? '' : 'empty'}">${data.numero_voie || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.numero_voie ? '' : 'empty'}">${dataHtml.numero_voie || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Bis / Ter / Quater</label>
-                        <div class="input-value ${data.bis_ter_quater ? '' : 'empty'}">${data.bis_ter_quater ? (data.bis_ter_quater === "bis" ? "Bis" : data.bis_ter_quater === "ter" ? "Ter" : data.bis_ter_quater === "quater" ? "Quater" : data.bis_ter_quater) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.bis_ter_quater ? '' : 'empty'}">${dataHtml.bis_ter_quater ? (dataHtml.bis_ter_quater === "bis" ? "Bis" : dataHtml.bis_ter_quater === "ter" ? "Ter" : dataHtml.bis_ter_quater === "quater" ? "Quater" : dataHtml.bis_ter_quater) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <label>Nom de la voie</label>
-                        <div class="input-value ${data.nom_voie ? '' : 'empty'}">${data.nom_voie || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.nom_voie ? '' : 'empty'}">${dataHtml.nom_voie || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid single">
                     <div class="form-group">
                         <label>Complément d'adresse</label>
-                        <div class="input-value ${data.complement ? '' : 'empty'}">${data.complement || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.complement ? '' : 'empty'}">${dataHtml.complement || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Code postal</label>
-                        <div class="input-value ${data.code_postal ? '' : 'empty'}">${data.code_postal || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.code_postal ? '' : 'empty'}">${dataHtml.code_postal || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Ville</label>
-                        <div class="input-value ${data.ville ? '' : 'empty'}">${data.ville || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.ville ? '' : 'empty'}">${dataHtml.ville || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -43878,11 +43749,11 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Téléphone</label>
-                        <div class="input-value ${data.telephone ? '' : 'empty'}">${data.telephone || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.telephone ? '' : 'empty'}">${dataHtml.telephone || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <div class="input-value ${data.email ? '' : 'empty'}">${data.email || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.email ? '' : 'empty'}">${dataHtml.email || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -43894,7 +43765,7 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Paiement par virement ?</label>
-                        <div class="input-value ${data.virement ? '' : 'empty'}">${data.virement || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.virement ? '' : 'empty'}">${dataHtml.virement || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -43907,18 +43778,18 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid single">
                     <div class="form-group">
                         <label>IBAN</label>
-                        <div class="input-value ${data.iban ? '' : 'empty'}">${data.iban || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.iban ? '' : 'empty'}">${dataHtml.iban || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>BIC</label>
-                        <div class="input-value ${data.bic ? '' : 'empty'}">${data.bic || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.bic ? '' : 'empty'}">${dataHtml.bic || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>RIB</label>
-                        <div class="input-value ${data.rib ? '' : 'empty'}">${data.rib || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.rib ? '' : 'empty'}">${dataHtml.rib || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -43938,44 +43809,44 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid single">
                     <div class="form-group">
                         <label>Intitulé du poste</label>
-                        <div class="input-value ${data.intitule_poste ? '' : 'empty'}">${data.intitule_poste || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.intitule_poste ? '' : 'empty'}">${dataHtml.intitule_poste || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Type de contrat</label>
-                        <div class="input-value ${data.type_contrat ? '' : 'empty'}">${data.type_contrat ? (data.type_contrat === "01" ? "CDI (01)" : data.type_contrat === "02" ? "CDD (02)" : data.type_contrat === "04" ? "Contrat d'apprentissage < 11 salariés (04)" : data.type_contrat === "05" ? "Contrat d'apprentissage ≥ 11 salariés (05)" : data.type_contrat === "AUTRE" ? "Autre (AUTRE)" : data.type_contrat) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.type_contrat ? '' : 'empty'}">${dataHtml.type_contrat ? (dataHtml.type_contrat === "01" ? "CDI (01)" : dataHtml.type_contrat === "02" ? "CDD (02)" : dataHtml.type_contrat === "04" ? "Contrat d'apprentissage < 11 salariés (04)" : dataHtml.type_contrat === "05" ? "Contrat d'apprentissage ≥ 11 salariés (05)" : dataHtml.type_contrat === "AUTRE" ? "Autre (AUTRE)" : dataHtml.type_contrat) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <label>Motif CDD</label>
-                        <div class="input-value ${data.motif_cdd ? '' : 'empty'}">${data.motif_cdd ? (data.motif_cdd === "01" ? "Surcroît d'activité (01)" : data.motif_cdd === "02" ? "Remplacement d'un salarié absent (02)" : data.motif_cdd === "03" ? "CDD d'usage (03)" : data.motif_cdd === "04" ? "CDD saisonnier (04)" : data.motif_cdd === "Usage" ? "Emploi d'usage" : data.motif_cdd === "Autre" ? "Autre" : data.motif_cdd) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.motif_cdd ? '' : 'empty'}">${dataHtml.motif_cdd ? (dataHtml.motif_cdd === "01" ? "Surcroît d'activité (01)" : dataHtml.motif_cdd === "02" ? "Remplacement d'un salarié absent (02)" : dataHtml.motif_cdd === "03" ? "CDD d'usage (03)" : dataHtml.motif_cdd === "04" ? "CDD saisonnier (04)" : dataHtml.motif_cdd === "Usage" ? "Emploi d'usage" : dataHtml.motif_cdd === "Autre" ? "Autre" : dataHtml.motif_cdd) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <label>Autre type de contrat</label>
-                        <div class="input-value ${data.autre_contrat ? '' : 'empty'}">${data.autre_contrat || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.autre_contrat ? '' : 'empty'}">${dataHtml.autre_contrat || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Code statut professionnel</label>
-                        <div class="input-value ${data.code_statut_pro ? '' : 'empty'}">${data.code_statut_pro ? (data.code_statut_pro === "01" ? "Ouvrier (01)" : data.code_statut_pro === "02" ? "Employé (02)" : data.code_statut_pro === "03" ? "Technicien (03)" : data.code_statut_pro === "04" ? "Agent de maîtrise (04)" : data.code_statut_pro === "29" ? "Cadre (29)" : data.code_statut_pro) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.code_statut_pro ? '' : 'empty'}">${dataHtml.code_statut_pro ? (dataHtml.code_statut_pro === "01" ? "Ouvrier (01)" : dataHtml.code_statut_pro === "02" ? "Employé (02)" : dataHtml.code_statut_pro === "03" ? "Technicien (03)" : dataHtml.code_statut_pro === "04" ? "Agent de maîtrise (04)" : dataHtml.code_statut_pro === "29" ? "Cadre (29)" : dataHtml.code_statut_pro) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <label>Code statut catégoriel</label>
-                        <div class="input-value ${data.code_statut_cc ? '' : 'empty'}">${data.code_statut_cc ? (data.code_statut_cc === "01" ? "Cadre (01)" : data.code_statut_cc === "02" ? "Non cadre (02)" : data.code_statut_cc === "90" ? "Sans statut catégoriel (90)" : data.code_statut_cc) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.code_statut_cc ? '' : 'empty'}">${dataHtml.code_statut_cc ? (dataHtml.code_statut_cc === "01" ? "Cadre (01)" : dataHtml.code_statut_cc === "02" ? "Non cadre (02)" : dataHtml.code_statut_cc === "90" ? "Sans statut catégoriel (90)" : dataHtml.code_statut_cc) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <label>Code retraite</label>
-                        <div class="input-value ${data.code_retraite ? '' : 'empty'}">${data.code_retraite ? (data.code_retraite === "01" ? "Cadre et assimilé (01)" : data.code_retraite === "04" ? "Non cadre (04)" : data.code_retraite) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.code_retraite ? '' : 'empty'}">${dataHtml.code_retraite ? (dataHtml.code_retraite === "01" ? "Cadre et assimilé (01)" : dataHtml.code_retraite === "04" ? "Non cadre (04)" : dataHtml.code_retraite) : "Non renseigné"}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Code caractéristique activité</label>
-                        <div class="input-value ${data.code_caracteristique_activite ? '' : 'empty'}">${data.code_caracteristique_activite ? (data.code_caracteristique_activite === "04" ? "Intermittent (04)" : data.code_caracteristique_activite === "06" ? "Saisonnier (06)" : data.code_caracteristique_activite === "10" ? "Forfait jour (10)" : data.code_caracteristique_activite === "90" ? "Salarié non concerné (90)" : data.code_caracteristique_activite) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.code_caracteristique_activite ? '' : 'empty'}">${dataHtml.code_caracteristique_activite ? (dataHtml.code_caracteristique_activite === "04" ? "Intermittent (04)" : dataHtml.code_caracteristique_activite === "06" ? "Saisonnier (06)" : dataHtml.code_caracteristique_activite === "10" ? "Forfait jour (10)" : dataHtml.code_caracteristique_activite === "90" ? "Salarié non concerné (90)" : dataHtml.code_caracteristique_activite) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -43988,15 +43859,15 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Echelon</label>
-                        <div class="input-value ${data.echelon ? '' : 'empty'}">${data.echelon || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.echelon ? '' : 'empty'}">${dataHtml.echelon || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Niveau</label>
-                        <div class="input-value ${data.niveau ? '' : 'empty'}">${data.niveau || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.niveau ? '' : 'empty'}">${dataHtml.niveau || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Coefficient</label>
-                        <div class="input-value ${data.coefficient ? '' : 'empty'}">${data.coefficient || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.coefficient ? '' : 'empty'}">${dataHtml.coefficient || 'Non renseigné'}</div>
                     </div>
                 </div>
 
@@ -44005,22 +43876,22 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Date de début de contrat</label>
-                        <div class="input-value ${data.debut_contrat ? '' : 'empty'}">${data.debut_contrat || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.debut_contrat ? '' : 'empty'}">${dataHtml.debut_contrat || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Date de fin de contrat</label>
-                        <div class="input-value ${data.fin_contrat ? '' : 'empty'}">${data.fin_contrat || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.fin_contrat ? '' : 'empty'}">${dataHtml.fin_contrat || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Date d'entrée</label>
-                        <div class="input-value ${data.date_entree ? '' : 'empty'}">${data.date_entree || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.date_entree ? '' : 'empty'}">${dataHtml.date_entree || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Date d'ancienneté</label>
-                        <div class="input-value ${data.date_anciennete ? '' : 'empty'}">${data.date_anciennete || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.date_anciennete ? '' : 'empty'}">${dataHtml.date_anciennete || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44035,30 +43906,30 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>DPAE effectuée</label>
-                        <div class="input-value ${data.dpae_effectuee ? '' : 'empty'}">${data.dpae_effectuee === 'Oui' ? 'Oui' : data.dpae_effectuee === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.dpae_effectuee ? '' : 'empty'}">${dataHtml.dpae_effectuee === 'Oui' ? 'Oui' : dataHtml.dpae_effectuee === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Contrat envoyé</label>
-                        <div class="input-value ${data.contrat_envoye ? '' : 'empty'}">${data.contrat_envoye === 'Oui' ? 'Oui' : data.contrat_envoye === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.contrat_envoye ? '' : 'empty'}">${dataHtml.contrat_envoye === 'Oui' ? 'Oui' : dataHtml.contrat_envoye === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Journée de solidarité</label>
-                        <div class="input-value ${data.journee_solidarite ? '' : 'empty'}">${data.journee_solidarite ? (data.journee_solidarite === "lundi_pentecote" ? "Lundi de Pentecôte" : data.journee_solidarite === "autre_jour" ? "Autre jour" : data.journee_solidarite === "fractionnee" ? "Fractionnée" : data.journee_solidarite === "non_applicable" ? "Non applicable" : data.journee_solidarite) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.journee_solidarite ? '' : 'empty'}">${dataHtml.journee_solidarite ? (dataHtml.journee_solidarite === "lundi_pentecote" ? "Lundi de Pentecôte" : dataHtml.journee_solidarite === "autre_jour" ? "Autre jour" : dataHtml.journee_solidarite === "fractionnee" ? "Fractionnée" : dataHtml.journee_solidarite === "non_applicable" ? "Non applicable" : dataHtml.journee_solidarite) : "Non renseigné"}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Exclusion gestion CP</label>
-                        <div class="input-value ${data.exclusion_gestion_cp ? '' : 'empty'}">${data.exclusion_gestion_cp === 'Oui' ? 'Oui' : data.exclusion_gestion_cp === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.exclusion_gestion_cp ? '' : 'empty'}">${dataHtml.exclusion_gestion_cp === 'Oui' ? 'Oui' : dataHtml.exclusion_gestion_cp === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Mutuelle</label>
-                        <div class="input-value ${data.mutuelle ? '' : 'empty'}">${data.mutuelle === 'Oui' ? 'Oui' : data.mutuelle === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.mutuelle ? '' : 'empty'}">${dataHtml.mutuelle === 'Oui' ? 'Oui' : dataHtml.mutuelle === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Type contrat mutuelle</label>
-                        <div class="input-value ${data.mutuelle_type_contrat ? '' : 'empty'}">${data.mutuelle_type_contrat ? (data.mutuelle_type_contrat === "individuel" ? "Individuel" : data.mutuelle_type_contrat === "collectif" ? "Collectif" : data.mutuelle_type_contrat === "obligatoire" ? "Obligatoire" : data.mutuelle_type_contrat === "facultatif" ? "Facultatif" : data.mutuelle_type_contrat) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.mutuelle_type_contrat ? '' : 'empty'}">${dataHtml.mutuelle_type_contrat ? (dataHtml.mutuelle_type_contrat === "individuel" ? "Individuel" : dataHtml.mutuelle_type_contrat === "collectif" ? "Collectif" : dataHtml.mutuelle_type_contrat === "obligatoire" ? "Obligatoire" : dataHtml.mutuelle_type_contrat === "facultatif" ? "Facultatif" : dataHtml.mutuelle_type_contrat) : "Non renseigné"}</div>
                     </div>
                 </div>
             </div>
@@ -44075,11 +43946,11 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Salaire de base (€)</label>
-                        <div class="input-value ${data.salaire_base ? '' : 'empty'}">${data.salaire_base || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.salaire_base ? '' : 'empty'}">${dataHtml.salaire_base || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Type de rémunération</label>
-                        <div class="input-value ${data.type_remuneration ? '' : 'empty'}">${data.type_remuneration ? (data.type_remuneration === "horaire" ? "Horaire" : data.type_remuneration === "mensuel" ? "Mensuel" : data.type_remuneration === "annuel" ? "Annuel" : data.type_remuneration === "forfait_jour" ? "Forfait jour" : data.type_remuneration) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.type_remuneration ? '' : 'empty'}">${dataHtml.type_remuneration ? (dataHtml.type_remuneration === "horaire" ? "Horaire" : dataHtml.type_remuneration === "mensuel" ? "Mensuel" : dataHtml.type_remuneration === "annuel" ? "Annuel" : dataHtml.type_remuneration === "forfait_jour" ? "Forfait jour" : dataHtml.type_remuneration) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44089,11 +43960,11 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Nombre de jours</label>
-                        <div class="input-value ${data.nb_jours ? '' : 'empty'}">${data.nb_jours || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.nb_jours ? '' : 'empty'}">${dataHtml.nb_jours || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Salarié forfait jour</label>
-                        <div class="input-value ${data.salarie_forfait_jour ? '' : 'empty'}">${data.salarie_forfait_jour === 'Oui' ? 'Oui' : data.salarie_forfait_jour === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.salarie_forfait_jour ? '' : 'empty'}">${dataHtml.salarie_forfait_jour === 'Oui' ? 'Oui' : dataHtml.salarie_forfait_jour === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44105,41 +43976,41 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Ticket restaurant</label>
-                        <div class="input-value ${data.ticket_restaurant ? '' : 'empty'}">${data.ticket_restaurant === 'Oui' ? 'Oui' : data.ticket_restaurant === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.ticket_restaurant ? '' : 'empty'}">${dataHtml.ticket_restaurant === 'Oui' ? 'Oui' : dataHtml.ticket_restaurant === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Titre transport</label>
-                        <div class="input-value ${data.titre_transport ? '' : 'empty'}">${data.titre_transport === 'Oui' ? 'Oui' : data.titre_transport === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.titre_transport ? '' : 'empty'}">${dataHtml.titre_transport === 'Oui' ? 'Oui' : dataHtml.titre_transport === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Type véhicule IK</label>
-                        <div class="input-value ${data.type_vehicule_ik ? '' : 'empty'}">${data.type_vehicule_ik ? (data.type_vehicule_ik === "VP" ? "Véhicule particulier (VP)" : data.type_vehicule_ik === "VU" ? "Véhicule utilitaire (VU)" : data.type_vehicule_ik === "2R" ? "Deux roues (2R)" : data.type_vehicule_ik === "Autre" ? "Autre" : data.type_vehicule_ik) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.type_vehicule_ik ? '' : 'empty'}">${dataHtml.type_vehicule_ik ? (dataHtml.type_vehicule_ik === "VP" ? "Véhicule particulier (VP)" : dataHtml.type_vehicule_ik === "VU" ? "Véhicule utilitaire (VU)" : dataHtml.type_vehicule_ik === "2R" ? "Deux roues (2R)" : dataHtml.type_vehicule_ik === "Autre" ? "Autre" : dataHtml.type_vehicule_ik) : "Non renseigné"}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Avantage logement</label>
-                        <div class="input-value ${data.avantage_logement ? '' : 'empty'}">${data.avantage_logement || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.avantage_logement ? '' : 'empty'}">${dataHtml.avantage_logement || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Avantage nourriture</label>
-                        <div class="input-value ${data.avantage_nourriture ? '' : 'empty'}">${data.avantage_nourriture || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.avantage_nourriture ? '' : 'empty'}">${dataHtml.avantage_nourriture || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Avantage voiture</label>
-                        <div class="input-value ${data.avantage_voiture ? '' : 'empty'}">${data.avantage_voiture || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.avantage_voiture ? '' : 'empty'}">${dataHtml.avantage_voiture || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Avantage NTIC</label>
-                        <div class="input-value ${data.avantage_ntic ? '' : 'empty'}">${data.avantage_ntic || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.avantage_ntic ? '' : 'empty'}">${dataHtml.avantage_ntic || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Avantage autres</label>
-                        <div class="input-value ${data.avantage_autres ? '' : 'empty'}">${data.avantage_autres || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.avantage_autres ? '' : 'empty'}">${dataHtml.avantage_autres || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44151,11 +44022,11 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Paiement mensuel CP</label>
-                        <div class="input-value ${data.paiement_mensuel_cp ? '' : 'empty'}">${data.paiement_mensuel_cp === 'Oui' ? 'Oui' : data.paiement_mensuel_cp === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.paiement_mensuel_cp ? '' : 'empty'}">${dataHtml.paiement_mensuel_cp === 'Oui' ? 'Oui' : dataHtml.paiement_mensuel_cp === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Paiement précarité</label>
-                        <div class="input-value ${data.paiement_precarite ? '' : 'empty'}">${data.paiement_precarite === 'Oui' ? 'Oui' : data.paiement_precarite === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.paiement_precarite ? '' : 'empty'}">${dataHtml.paiement_precarite === 'Oui' ? 'Oui' : dataHtml.paiement_precarite === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44167,75 +44038,75 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>RTT actif</label>
-                        <div class="input-value ${data.rtt_actif ? '' : 'empty'}">${data.rtt_actif === 'Oui' ? 'Oui' : data.rtt_actif === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.rtt_actif ? '' : 'empty'}">${dataHtml.rtt_actif === 'Oui' ? 'Oui' : dataHtml.rtt_actif === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Mode RTT</label>
-                        <div class="input-value ${data.rtt_mode ? '' : 'empty'}">${data.rtt_mode ? (data.rtt_mode === "fixe" ? "Fixe" : data.rtt_mode === "variable" ? "Variable" : data.rtt_mode) : "Non renseigné"}</div>
+                        <div class="input-value ${dataHtml.rtt_mode ? '' : 'empty'}">${dataHtml.rtt_mode ? (dataHtml.rtt_mode === "fixe" ? "Fixe" : dataHtml.rtt_mode === "variable" ? "Variable" : dataHtml.rtt_mode) : "Non renseigné"}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT annuel</label>
-                        <div class="input-value ${data.rtt_annuel ? '' : 'empty'}">${data.rtt_annuel || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.rtt_annuel ? '' : 'empty'}">${dataHtml.rtt_annuel || 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>RTT Janvier</label>
-                        <div class="input-value ${data.rtt_janvier ? '' : 'empty'}">${data.rtt_janvier || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_janvier ? '' : 'empty'}">${dataHtml.rtt_janvier || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Février</label>
-                        <div class="input-value ${data.rtt_fevrier ? '' : 'empty'}">${data.rtt_fevrier || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_fevrier ? '' : 'empty'}">${dataHtml.rtt_fevrier || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Mars</label>
-                        <div class="input-value ${data.rtt_mars ? '' : 'empty'}">${data.rtt_mars || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_mars ? '' : 'empty'}">${dataHtml.rtt_mars || '0'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>RTT Avril</label>
-                        <div class="input-value ${data.rtt_avril ? '' : 'empty'}">${data.rtt_avril || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_avril ? '' : 'empty'}">${dataHtml.rtt_avril || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Mai</label>
-                        <div class="input-value ${data.rtt_mai ? '' : 'empty'}">${data.rtt_mai || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_mai ? '' : 'empty'}">${dataHtml.rtt_mai || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Juin</label>
-                        <div class="input-value ${data.rtt_juin ? '' : 'empty'}">${data.rtt_juin || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_juin ? '' : 'empty'}">${dataHtml.rtt_juin || '0'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>RTT Juillet</label>
-                        <div class="input-value ${data.rtt_juillet ? '' : 'empty'}">${data.rtt_juillet || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_juillet ? '' : 'empty'}">${dataHtml.rtt_juillet || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Août</label>
-                        <div class="input-value ${data.rtt_aout ? '' : 'empty'}">${data.rtt_aout || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_aout ? '' : 'empty'}">${dataHtml.rtt_aout || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Septembre</label>
-                        <div class="input-value ${data.rtt_septembre ? '' : 'empty'}">${data.rtt_septembre || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_septembre ? '' : 'empty'}">${dataHtml.rtt_septembre || '0'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>RTT Octobre</label>
-                        <div class="input-value ${data.rtt_octobre ? '' : 'empty'}">${data.rtt_octobre || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_octobre ? '' : 'empty'}">${dataHtml.rtt_octobre || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Novembre</label>
-                        <div class="input-value ${data.rtt_novembre ? '' : 'empty'}">${data.rtt_novembre || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_novembre ? '' : 'empty'}">${dataHtml.rtt_novembre || '0'}</div>
                     </div>
                     <div class="form-group">
                         <label>RTT Décembre</label>
-                        <div class="input-value ${data.rtt_decembre ? '' : 'empty'}">${data.rtt_decembre || '0'}</div>
+                        <div class="input-value ${dataHtml.rtt_decembre ? '' : 'empty'}">${dataHtml.rtt_decembre || '0'}</div>
                     </div>
                 </div>
             </div>
@@ -44252,7 +44123,7 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Nombre d'heures mensuelles</label>
-                        <div class="input-value ${data.nb_heures_mensuelles ? '' : 'empty'}">${data.nb_heures_mensuelles || 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.nb_heures_mensuelles ? '' : 'empty'}">${dataHtml.nb_heures_mensuelles || 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44267,42 +44138,42 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Lundi</label>
-                        <div class="input-value ${data.planning_lundi ? '' : 'empty'}">${data.planning_lundi || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_lundi ? '' : 'empty'}">${dataHtml.planning_lundi || '0'} h</div>
                     </div>
                     <div class="form-group">
                         <label>Mardi</label>
-                        <div class="input-value ${data.planning_mardi ? '' : 'empty'}">${data.planning_mardi || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_mardi ? '' : 'empty'}">${dataHtml.planning_mardi || '0'} h</div>
                     </div>
                     <div class="form-group">
                         <label>Mercredi</label>
-                        <div class="input-value ${data.planning_mercredi ? '' : 'empty'}">${data.planning_mercredi || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_mercredi ? '' : 'empty'}">${dataHtml.planning_mercredi || '0'} h</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Jeudi</label>
-                        <div class="input-value ${data.planning_jeudi ? '' : 'empty'}">${data.planning_jeudi || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_jeudi ? '' : 'empty'}">${dataHtml.planning_jeudi || '0'} h</div>
                     </div>
                     <div class="form-group">
                         <label>Vendredi</label>
-                        <div class="input-value ${data.planning_vendredi ? '' : 'empty'}">${data.planning_vendredi || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_vendredi ? '' : 'empty'}">${dataHtml.planning_vendredi || '0'} h</div>
                     </div>
                     <div class="form-group">
                         <label>Samedi</label>
-                        <div class="input-value ${data.planning_samedi ? '' : 'empty'}">${data.planning_samedi || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_samedi ? '' : 'empty'}">${dataHtml.planning_samedi || '0'} h</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Dimanche</label>
-                        <div class="input-value ${data.planning_dimanche ? '' : 'empty'}">${data.planning_dimanche || '0'} h</div>
+                        <div class="input-value ${dataHtml.planning_dimanche ? '' : 'empty'}">${dataHtml.planning_dimanche || '0'} h</div>
                     </div>
                     <div class="form-group">
                         <label><strong>Total hebdomadaire</strong></label>
                         <div class="input-value" style="background: #e3f2fd; font-weight: 700; color: #0046fe;">
-                            ${(parseFloat(data.planning_lundi || 0) + parseFloat(data.planning_mardi || 0) + parseFloat(data.planning_mercredi || 0) + parseFloat(data.planning_jeudi || 0) + parseFloat(data.planning_vendredi || 0) + parseFloat(data.planning_samedi || 0) + parseFloat(data.planning_dimanche || 0)).toFixed(2)} h
+                            ${(parseFloat(dataHtml.planning_lundi || 0) + parseFloat(dataHtml.planning_mardi || 0) + parseFloat(dataHtml.planning_mercredi || 0) + parseFloat(dataHtml.planning_jeudi || 0) + parseFloat(dataHtml.planning_vendredi || 0) + parseFloat(dataHtml.planning_samedi || 0) + parseFloat(dataHtml.planning_dimanche || 0)).toFixed(2)} h
                         </div>
                     </div>
                     <div class="form-group">
@@ -44315,37 +44186,37 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Lundi</label>
-                        <div class="input-value ${data.forfait_jour_lundi ? '' : 'empty'}">${data.forfait_jour_lundi === 'Oui' ? 'Oui' : data.forfait_jour_lundi === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_lundi ? '' : 'empty'}">${dataHtml.forfait_jour_lundi === 'Oui' ? 'Oui' : dataHtml.forfait_jour_lundi === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Mardi</label>
-                        <div class="input-value ${data.forfait_jour_mardi ? '' : 'empty'}">${data.forfait_jour_mardi === 'Oui' ? 'Oui' : data.forfait_jour_mardi === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_mardi ? '' : 'empty'}">${dataHtml.forfait_jour_mardi === 'Oui' ? 'Oui' : dataHtml.forfait_jour_mardi === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Mercredi</label>
-                        <div class="input-value ${data.forfait_jour_mercredi ? '' : 'empty'}">${data.forfait_jour_mercredi === 'Oui' ? 'Oui' : data.forfait_jour_mercredi === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_mercredi ? '' : 'empty'}">${dataHtml.forfait_jour_mercredi === 'Oui' ? 'Oui' : dataHtml.forfait_jour_mercredi === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Jeudi</label>
-                        <div class="input-value ${data.forfait_jour_jeudi ? '' : 'empty'}">${data.forfait_jour_jeudi === 'Oui' ? 'Oui' : data.forfait_jour_jeudi === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_jeudi ? '' : 'empty'}">${dataHtml.forfait_jour_jeudi === 'Oui' ? 'Oui' : dataHtml.forfait_jour_jeudi === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Vendredi</label>
-                        <div class="input-value ${data.forfait_jour_vendredi ? '' : 'empty'}">${data.forfait_jour_vendredi === 'Oui' ? 'Oui' : data.forfait_jour_vendredi === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_vendredi ? '' : 'empty'}">${dataHtml.forfait_jour_vendredi === 'Oui' ? 'Oui' : dataHtml.forfait_jour_vendredi === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <label>Samedi</label>
-                        <div class="input-value ${data.forfait_jour_samedi ? '' : 'empty'}">${data.forfait_jour_samedi === 'Oui' ? 'Oui' : data.forfait_jour_samedi === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_samedi ? '' : 'empty'}">${dataHtml.forfait_jour_samedi === 'Oui' ? 'Oui' : dataHtml.forfait_jour_samedi === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Dimanche</label>
-                        <div class="input-value ${data.forfait_jour_dimanche ? '' : 'empty'}">${data.forfait_jour_dimanche === 'Oui' ? 'Oui' : data.forfait_jour_dimanche === 'Non' ? 'Non' : 'Non renseigné'}</div>
+                        <div class="input-value ${dataHtml.forfait_jour_dimanche ? '' : 'empty'}">${dataHtml.forfait_jour_dimanche === 'Oui' ? 'Oui' : dataHtml.forfait_jour_dimanche === 'Non' ? 'Non' : 'Non renseigné'}</div>
                     </div>
                     <div class="form-group">
                         <!-- Vide -->
@@ -44360,7 +44231,7 @@ console.log('✅ 39192 codes postaux chargés');
                 <div class="form-grid single">
                     <div class="form-group">
                         <label>Commentaires additionnels</label>
-                        <div class="input-value ${data.commentaires ? '' : 'empty'}" style="min-height: 100px; white-space: pre-wrap;">${data.commentaires || 'Aucun commentaire'}</div>
+                        <div class="input-value ${dataHtml.commentaires ? '' : 'empty'}" style="min-height: 100px; white-space: pre-wrap;">${dataHtml.commentaires || 'Aucun commentaire'}</div>
                     </div>
                 </div>
             </div>
@@ -44375,20 +44246,22 @@ console.log('✅ 39192 codes postaux chargés');
     ${fichierContratBase64 ? `
     <div style="margin:30px auto;max-width:900px;padding:20px;background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;font-family:sans-serif;">
         <div style="font-size:16px;font-weight:700;color:#166534;margin-bottom:12px;">📎 Contrat de travail joint</div>
-        <div style="font-size:14px;color:#374151;margin-bottom:12px;">Fichier : <strong>${fichierContratNom}</strong></div>
-        <a href="${fichierContratBase64}" download="${fichierContratNom}" style="display:inline-block;padding:10px 20px;background:#22c55e;color:white;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">📥 Télécharger le contrat</a>
+        <div style="font-size:14px;color:#374151;margin-bottom:12px;">Fichier : <strong>${escHtml(fichierContratNom)}</strong></div>
+        <a href="${fichierContratBase64}" download="${escHtml(fichierContratNom)}" style="display:inline-block;padding:10px 20px;background:#22c55e;color:white;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">📥 Télécharger le contrat</a>
     </div>` : ''}
     
     <script>
         // CSV embarqué en base64 (Silae uniquement)
         const csvData_Silae = '${csvBase64}';
         
-        // Données du salarié pour le nom de fichier
-        const salarie_nom = '${data.nom_naissance || "nouveau"}';
-        const salarie_prenom = '${data.prenom || ""}';
         const excelFileName = '${generatedFileName.replace('.html', '')}.xls';
         
         function downloadCSV() {
+            // La génération de l'Excel dépend d'une librairie chargée depuis un CDN externe
+            if (typeof XLSX === 'undefined') {
+                alert("Le fichier Excel n'a pas pu être généré : une ressource nécessaire n'a pas pu être chargée (connexion internet ou pare-feu bloquant cdnjs.cloudflare.com). Réessayez, ou contactez votre support si le problème persiste.");
+                return;
+            }
             // Décoder le base64
             const csvContent = decodeURIComponent(escape(atob(csvData_Silae)));
             
@@ -44512,29 +44385,7 @@ console.log('✅ 39192 codes postaux chargés');
             // Mettre à jour l'overlay avec le nom du fichier
             const filenameEl = document.getElementById('success-filename');
             if (filenameEl) filenameEl.textContent = '📄 ' + generatedFileName;
-            const subject = encodeURIComponent('Entrée salarié - ' + (data.nom_naissance || '') + ' ' + (data.prenom || ''));
-            const mailtoBtn = document.getElementById('btn-mailto');
-            if (mailtoBtn) mailtoBtn.setAttribute('data-mailto', 'mailto:contact.productionpaye@ebp.com?subject=' + subject);
             link.click();
-        }
-
-        function openMailto() {
-            const btn = document.getElementById('btn-mailto');
-            if (btn) window.location.href = btn.getAttribute('data-mailto');
-        }
-
-        function copyEmail(btn) {
-            navigator.clipboard.writeText("contact.productionpaye@ebp.com").then(() => {
-                const original = btn.textContent;
-                btn.textContent = "✅ Copié !";
-                btn.style.background = "#dcfce7";
-                btn.style.borderColor = "#22c55e";
-                setTimeout(() => {
-                    btn.textContent = original;
-                    btn.style.background = "white";
-                    btn.style.borderColor = "#d1d5db";
-                }, 2000);
-            });
         }
 
         function closeSuccess() {
