@@ -42544,6 +42544,7 @@ console.log('✅ 39192 codes postaux chargés');
                     let rows = '';
                     section.querySelectorAll('input[name], select[name], textarea[name]').forEach(el => {
                         if (el.type === 'file' || el.type === 'hidden') return;
+                        if (el.type === 'radio' && !el.checked) return;
                         if (!champVisibleDansEtape(el, stepContent)) return;
 
                         let label = '';
@@ -42672,6 +42673,18 @@ console.log('✅ 39192 codes postaux chargés');
                 if (nirInput && nirInput.value) {
                     validerNIR();
                     if (nirErreur) hasError = true;
+
+                    // Clé NIR obligatoire si le numéro est renseigné
+                    const cleNirInput = document.getElementById('cle_secu');
+                    if (cleNirInput && !/^\d{2}$/.test(cleNirInput.value.trim())) {
+                        const alerteCleNir = document.getElementById('alerte_cle_nir');
+                        if (alerteCleNir) {
+                            alerteCleNir.style.cssText = 'display:block;margin-top:6px;padding:8px 12px;background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;font-size:13px;color:#991b1b;';
+                            alerteCleNir.textContent = '🚫 La clé (2 chiffres) est obligatoire lorsque le numéro de sécurité sociale est renseigné.';
+                        }
+                        cleNirInput.style.borderColor = '#ef4444';
+                        hasError = true;
+                    }
                 }
 
                 if (hasError) {
