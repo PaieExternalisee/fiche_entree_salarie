@@ -1080,6 +1080,67 @@
         .info-btn.active .info-popup { display: block; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <style id="design-moderne">
+        /* ===== Version design : animations plus discrètes + micro-interactions ===== */
+        /* 1. Fond saisonnier : couleurs d'origine conservées (allègement fait par le script) */
+
+        /* Rendu plus moderne */
+        .card { box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.06); }
+        /* Titre d'étape + sous-titre fusionnés (plus de double bandeau) */
+        body .step-title {
+            background: transparent; box-shadow: none; border-left: none;
+            padding: 0; margin: 30px 0 4px; font-size: 26px; letter-spacing: -0.3px;
+        }
+        body .step-description {
+            background: transparent; box-shadow: none; border-left: none;
+            padding: 0; margin-bottom: 24px; font-size: 15px; font-weight: 500; color: #6b7280;
+        }
+        /* Une seule carte par section (plus de filet bleu ni de fond gris) */
+        body .section {
+            background: #fff; border: 1px solid #e8ecf3; border-left: 1px solid #e8ecf3;
+            border-radius: 16px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+        }
+        body .section-header { font-size: 16px; letter-spacing: 0.1px; }
+        /* Étapes : libellés plus lisibles, coche sur les étapes terminées */
+        .step-label { font-size: 13px; }
+        .step.active .step-label { font-weight: 700; }
+        .step.completed .step-circle { font-size: 0; }
+        .step.completed .step-circle::after { content: "\2713"; font-size: 17px; }
+        /* Thème rentrée : fournitures en filigrane */
+        .bg-animation .rentree-particle { filter: saturate(1.5) drop-shadow(1px 2px 4px rgba(0,0,0,.2)); }
+
+        /* 3. Micro-animations */
+        .step-content.active { animation: stepIn 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        @keyframes stepIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        input, select, textarea { transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+        .btn { transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; }
+        .btn:hover { transform: translateY(-1px); }
+        .btn:active { transform: scale(0.97); }
+        [id^="alerte_"] { animation: alerteIn 0.25s ease-out; }
+        @keyframes alerteIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .autocomplete-suggestions.show { animation: alerteIn 0.15s ease-out; }
+
+        /* 4. Animation en pause quand l'onglet n'est pas visible */
+        .bg-paused .bg-animation, .bg-paused .bg-animation * { animation-play-state: paused !important; }
+
+        /* 2. Respect du réglage système « réduire les animations » */
+        @media (prefers-reduced-motion: reduce) {
+            .bg-animation > * { display: none !important; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="bg-animation"></div>
@@ -2736,8 +2797,8 @@
             // 📚 SEPTEMBRE : Rentrée scolaire
             // ─────────────────────────────────────────────
             } else if (month === 9) {
-                bgAnimation.style.background = 'linear-gradient(to bottom, #ffeaa0 0%, #ffe066 30%, #fff8dc 70%, #fffacd 100%)';
-                document.body.style.background = 'linear-gradient(to bottom, #ffeaa0 0%, #ffe066 30%, #fff8dc 70%, #fffacd 100%)';
+                bgAnimation.style.background = 'linear-gradient(to bottom, #f0e9dc 0%, #e8dfcf 100%)';
+                document.body.style.background = 'linear-gradient(to bottom, #f0e9dc 0%, #e8dfcf 100%)';
 
                 particleType = 'rentree-particle';
                 particleContent = ['📚','✏️','🎒','📖','🖊️','📐','📏','🖍️','📓'];
@@ -42042,6 +42103,47 @@
 console.log('✅ 39192 codes postaux chargés');
 
         
+        // ---- Recherche via l'API geo.api.gouv.fr, avec repli sur la base locale (codesPostaux) ----
+        function normaliserVilleAPI(nom) {
+            return nom.toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+                .replace(/[-']/g, ' ').replace(/\s+/g, ' ').trim()
+                .replace(/\bSAINT\b/g, 'ST').replace(/\bSAINTE\b/g, 'STE');
+        }
+        async function appelerGeoAPI(url) {
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), 3000);
+            try {
+                const rep = await fetch(url, { signal: ctrl.signal });
+                if (!rep.ok) return null;
+                const data = await rep.json();
+                if (!Array.isArray(data)) return null;
+                const res = [];
+                data.forEach(c => (c.codesPostaux || []).forEach(cp => {
+                    if (c.nom && c.code) res.push({ code_insee: c.code, ville: normaliserVilleAPI(c.nom), code_postal: cp });
+                }));
+                return res;
+            } catch (e) {
+                return null; // API indisponible ou bloquée : on utilisera la base locale
+            } finally {
+                clearTimeout(timer);
+            }
+        }
+        async function rechercherCommunes(mode, value) {
+            let res = null;
+            const champs = 'fields=nom,code,codesPostaux';
+            if (mode === 'cp' && /^\d{5}$/.test(value)) {
+                res = await appelerGeoAPI('https://geo.api.gouv.fr/communes?codePostal=' + value + '&' + champs);
+            } else if (mode === 'ville') {
+                const nom = value.replace(/\bST\b/g, 'SAINT').replace(/\bSTE\b/g, 'SAINTE');
+                res = await appelerGeoAPI('https://geo.api.gouv.fr/communes?nom=' + encodeURIComponent(nom) + '&' + champs + '&boost=population&limit=10');
+            }
+            if (res && res.length) return res;
+            // Repli : base locale
+            return mode === 'cp'
+                ? codesPostaux.filter(item => item.code_postal.startsWith(value))
+                : codesPostaux.filter(item => item.ville.toUpperCase().includes(value));
+        }
+
         let selectedSuggestionIndex = -1;
         let currentSuggestions = [];
         let currentField = null;
@@ -42054,7 +42156,7 @@ console.log('✅ 39192 codes postaux chargés');
         const villeSuggestions = document.getElementById('ville-suggestions');
         
         // AUTOCOMPLÉTION CODE POSTAL → VILLE
-        cpInput.addEventListener('input', function() {
+        cpInput.addEventListener('input', async function() {
             const value = this.value.trim();
             codeInseeCache = null; // Réinitialiser le cache quand l'utilisateur tape
             
@@ -42064,9 +42166,10 @@ console.log('✅ 39192 codes postaux chargés');
             }
             
             // Rechercher les codes postaux correspondants
-            const matches = codesPostaux.filter(item => 
-                item.code_postal.startsWith(value)
-            );
+            await new Promise(r => setTimeout(r, 250)); // attendre la fin de la frappe
+            if (this.value.trim() !== value) return;
+            const matches = await rechercherCommunes('cp', value);
+            if (this.value.trim() !== value) return;
             
             if (matches.length === 0) {
                 cpSuggestions.classList.remove('show');
@@ -42098,7 +42201,7 @@ console.log('✅ 39192 codes postaux chargés');
         });
         
         // AUTOCOMPLÉTION VILLE → CODE POSTAL
-        villeInput.addEventListener('input', function() {
+        villeInput.addEventListener('input', async function() {
             const value = this.value.trim().toUpperCase();
             codeInseeCache = null; // Réinitialiser le cache quand l'utilisateur tape
             
@@ -42108,9 +42211,10 @@ console.log('✅ 39192 codes postaux chargés');
             }
             
             // Rechercher les villes correspondantes
-            const matches = codesPostaux.filter(item => 
-                item.ville.toUpperCase().includes(value)
-            );
+            await new Promise(r => setTimeout(r, 250)); // attendre la fin de la frappe
+            if (this.value.trim().toUpperCase() !== value) return;
+            const matches = await rechercherCommunes('ville', value);
+            if (this.value.trim().toUpperCase() !== value) return;
             
             if (matches.length === 0) {
                 villeSuggestions.classList.remove('show');
@@ -44373,7 +44477,7 @@ console.log('✅ 39192 codes postaux chargés');
                 bg.style.background = 'linear-gradient(to bottom,#87CEEB 0%,#E0F6FF 100%)';
                 const sun=document.createElement('div');sun.className='summer-sun';bg.appendChild(sun); return;
             } else if (month === 9) {
-                bg.style.background = 'linear-gradient(to bottom,#ffeaa0 0%,#ffe066 30%,#fff8dc 70%,#fffacd 100%)';
+                bg.style.background = 'linear-gradient(to bottom, #f0e9dc 0%, #e8dfcf 100%)';
                 document.body.style.background = bg.style.background;
                 particleType='rentree-particle'; particleContent=['📚','✏️','🎒','📖','🖊️','📐','📏','🖍️','📓']; particleCount=25; animDuration=[9,16];
             } else if (month === 10 || month === 11) {
@@ -44900,5 +45004,26 @@ console.log('✅ 39192 codes postaux chargés');
         }
         });
     </script>
+
+<script id="design-moderne-js">
+(function () {
+    // 1. Alléger le fond saisonnier : moins de particules, plus lentes
+    function alleger() {
+        const bg = document.querySelector('.bg-animation');
+        if (!bg) return;
+        const petits = Array.from(bg.children).filter(el => el.offsetWidth < 100 && el.offsetHeight < 100);
+        if (petits.length > 20) petits.forEach((el, i) => { if (i % 2 === 1) el.remove(); });
+        bg.querySelectorAll('*').forEach(el => {
+            const d = parseFloat(el.style.animationDuration);
+            if (d > 0) el.style.animationDuration = (d * 1.4) + 's';
+        });
+    }
+    window.addEventListener('load', () => setTimeout(alleger, 300));
+    // 4. Pause quand l'onglet est en arrière-plan
+    document.addEventListener('visibilitychange', () => {
+        document.documentElement.classList.toggle('bg-paused', document.hidden);
+    });
+})();
+</script>
 </body>
 </html>
