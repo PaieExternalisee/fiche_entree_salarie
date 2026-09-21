@@ -1929,15 +1929,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Date d'entrée dans l'entreprise <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">En général identique à la date de début de contrat. Peut différer si le salarié a déjà travaillé dans votre entreprise sous un contrat précédent</span>i</button></label>
-                                    <input type="date" name="date_entree" id="date_entree">
+                                    <input type="date" name="date_entree" id="date_entree" readonly style="opacity:0.7;cursor:not-allowed;">
                                 </div>
                                 <div class="form-group">
                                     <label>Date pour le calcul de l'ancienneté <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">En général identique à la date d'entrée. À modifier uniquement si une ancienneté antérieure est reprise contractuellement</span>i</button></label>
-                                    <input type="date" name="date_anciennete" id="date_anciennete">
+                                    <input type="date" name="date_anciennete" id="date_anciennete" readonly style="opacity:0.7;cursor:not-allowed;">
                                 </div>
                                 <div class="form-group" id="fin_contrat_group" style="display:none;">
                                     <label>Date de fin de contrat <span style="color: red;">*</span></label>
                                     <input type="date" name="fin_contrat" id="fin_contrat">
+                                </div>
+                                <div class="form-group" style="grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 8px;">
+                                    <input type="checkbox" id="modif_dates_anciennete" onchange="toggleModifDatesAnciennete()" style="width:auto; margin:0;">
+                                    <label for="modif_dates_anciennete" style="margin:0; cursor:pointer;">La date d'ancienneté dans l'entreprise est différente de la date d'entrée dans le contrat, je souhaite la modifier</label>
                                 </div>
                             </div>
                         </div>
@@ -42543,23 +42547,43 @@ console.log('✅ 39192 codes postaux chargés');
             }
         }
         
-        // Fonction pour auto-remplir les dates depuis la date de début de contrat
+        // Date d'entrée et date d'ancienneté = date de début de contrat, sauf si la case "modifier" est cochée
         function updateDatesFromDebut() {
+            const cb = document.getElementById('modif_dates_anciennete');
+            if (cb && cb.checked) return; // saisie manuelle autorisée : on ne touche à rien
             const debutContrat = document.getElementById('debut_contrat');
-            const dateEntree = document.getElementById('date_entree');
-            const dateAnciennete = document.getElementById('date_anciennete');
-            
-            if (debutContrat && debutContrat.value) {
-                // Auto-remplir date d'entrée si vide
-                if (dateEntree && !dateEntree.value) {
-                    dateEntree.value = debutContrat.value;
-                }
-                // Auto-remplir date d'ancienneté si vide
-                if (dateAnciennete && !dateAnciennete.value) {
-                    dateAnciennete.value = debutContrat.value;
-                }
+            if (!debutContrat) return;
+            let valeur = debutContrat.value;
+            if (valeur) {
+                // Ignorer les saisies partielles du navigateur (ex. année 0002 pendant la frappe)
+                const annee = parseInt(valeur.split('-')[0], 10);
+                if (isNaN(annee) || annee < 1900) return;
             }
+            ['date_entree', 'date_anciennete'].forEach(id => {
+                const champ = document.getElementById(id);
+                if (champ) champ.value = valeur;
+            });
         }
+
+        // Case à cocher : déverrouille / reverrouille les deux dates
+        function toggleModifDatesAnciennete() {
+            const cb = document.getElementById('modif_dates_anciennete');
+            const editable = !!(cb && cb.checked);
+            ['date_entree', 'date_anciennete'].forEach(id => {
+                const champ = document.getElementById(id);
+                if (!champ) return;
+                champ.readOnly = !editable;
+                champ.style.opacity = editable ? '' : '0.7';
+                champ.style.cursor = editable ? '' : 'not-allowed';
+            });
+            if (!editable) updateDatesFromDebut(); // retour au mode auto : réaligne sur le début de contrat
+        }
+
+        // Synchro aussi pendant la saisie au clavier du début de contrat
+        (function () {
+            const dc = document.getElementById('debut_contrat');
+            if (dc) dc.addEventListener('input', updateDatesFromDebut);
+        })();
         
         const totalSteps = 6;
 
