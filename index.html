@@ -1141,6 +1141,29 @@
             }
         }
     </style>
+    <style id="mobile-fixes">
+        /* ===== Correctifs mobile uniquement (écrans <= 640 px). Aucun effet sur ordinateur/tablette. ===== */
+        @media (max-width: 640px) {
+            body { padding: 10px; }
+            .header { padding: 24px 16px; }
+            .header .brand-logo { width: 100%; max-width: 260px; }
+            .header h1 { font-size: 22px; }
+            .form-body { padding: 24px 16px; }
+            .step-content[data-step="1"] { padding: 24px 16px; margin: -24px -16px; }
+
+            /* Les champs ne doivent jamais dépasser de leur carte */
+            .form-grid { grid-template-columns: minmax(0, 1fr); }
+            .form-group { min-width: 0; }
+            input:not([type="checkbox"]):not([type="radio"]), select, textarea { min-width: 0; max-width: 100%; }
+
+            /* Barre d'étapes : numéros seuls, nom affiché pour l'étape courante uniquement */
+            .stepper { overflow-x: visible; }
+            .step-label { display: none; }
+            .step.active .step-label { display: block; white-space: nowrap; font-size: 12px; }
+            .step-circle { width: 34px; height: 34px; }
+            .stepper-line, .stepper-progress { top: 17px; }
+        }
+    </style>
 </head>
 <body>
     <div class="bg-animation"></div>
