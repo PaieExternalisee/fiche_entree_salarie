@@ -1965,7 +1965,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label id="label_salaire_base">Salaire de base (Brut)</label>
-                                    <input type="number" name="salaire_base" step="0.01" placeholder="0.00">
+                                    <input type="number" name="salaire_base" id="salaire_base" step="0.01" placeholder="0.00" oninput="filtrerMontant(this)" onblur="nettoyerMontant(this)">
+                                </div>
+                            </div>
+
+                            <!-- Rémunération au SMIC ou minimum conventionnel -->
+                            <div class="form-grid" style="margin-top:12px;">
+                                <div class="form-group" style="display:flex;flex-direction:row;align-items:center;gap:10px;white-space:nowrap;">
+                                    <input type="checkbox" id="smic_smc_checkbox" onchange="toggleSmicSmcCheckbox()" style="width:18px;height:18px;flex-shrink:0;cursor:pointer;margin:0;">
+                                    <label for="smic_smc_checkbox" style="cursor:pointer;margin:0;white-space:normal;">Rémunération au SMIC ou minimum conventionnel (le plus avantageux sera retenu)</label>
                                 </div>
                             </div>
                         </div>
@@ -42934,6 +42942,7 @@ console.log('✅ 39192 codes postaux chargés');
             for (let [key, value] of formData.entries()) {
                 data[key] = value;
             }
+
             
             // Convertir les dates du format ISO (YYYY-MM-DD) au format français (DD/MM/YYYY)
             const champsDate = ['date_naissance', 'debut_contrat', 'date_entree', 'date_anciennete', 'fin_contrat'];
@@ -42957,7 +42966,14 @@ console.log('✅ 39192 codes postaux chargés');
             }
             
             // Générer le CSV (sera embarqué dans le HTML)
-            const csvContent = generateCSV(data);
+            // La mention "SMIC ou SMC" est purement indicative à l'écran (case "Salaire de base") :
+            // elle ne doit jamais être écrite dans le fichier d'import Excel/Silae, donc on la retire
+            // uniquement dans la copie de données servant à générer le CSV, pas dans le récapitulatif.
+            const dataCsv = Object.assign({}, data);
+            if (document.getElementById('smic_smc_checkbox') && document.getElementById('smic_smc_checkbox').checked) {
+                dataCsv['salaire_base'] = '';
+            }
+            const csvContent = generateCSV(dataCsv);
             
             // Calculer le nom de fichier AVANT la génération du HTML
             const generatedFileName = (data.etablissement ? data.etablissement.replace(/\s+/g, '_') + '_' : '') + 'entrée_salarié_' + (data.nom_naissance || 'nouveau') + '_' + (data.prenom || '') + '.html';
@@ -43349,8 +43365,10 @@ console.log('✅ 39192 codes postaux chargés');
         function generateWord(data, csvContent, generatedFileName) {
             console.log('✅ Génération du document HTML avec CSV embarqué (multi-logiciels)');
             
-            // Générer le CSV Silae
-            const csvContent_Silae = generateCSV(data);
+            // Utiliser le CSV déjà généré et transmis en paramètre (nettoyé des mentions
+            // indicatives comme "SMIC ou SMC" avant export) — NE PAS le régénérer ici à partir
+            // de `data`, sous peine de réintroduire des valeurs indicatives dans le fichier d'import.
+            const csvContent_Silae = csvContent;
 
             // Encoder le CSV en base64 pour l'embarquer
             const csvBase64 = btoa(unescape(encodeURIComponent(csvContent_Silae)));
@@ -44850,6 +44868,28 @@ console.log('✅ 39192 codes postaux chargés');
                 btnInactive.style.background = '#f3f4f6';
                 btnInactive.style.color = '#374151';
                 btnInactive.style.borderColor = '#e5e7eb';
+            }
+        }
+
+        function toggleSmicSmcCheckbox() {
+            const checkbox = document.getElementById('smic_smc_checkbox');
+            const salaireBase = document.getElementById('salaire_base');
+            if (!checkbox || !salaireBase) return;
+
+            if (checkbox.checked) {
+                // Le champ affiche la mention indicative "SMIC ou SMC" à l'écran.
+                // Cette valeur textuelle sera retirée avant l'export Excel (voir handler de soumission).
+                salaireBase.type = 'text';
+                salaireBase.value = 'SMIC ou SMC';
+                salaireBase.readOnly = true;
+                salaireBase.style.background = '#f3f4f6';
+                salaireBase.style.fontStyle = 'italic';
+            } else {
+                salaireBase.type = 'number';
+                salaireBase.value = '';
+                salaireBase.readOnly = false;
+                salaireBase.style.background = '';
+                salaireBase.style.fontStyle = '';
             }
         }
 
